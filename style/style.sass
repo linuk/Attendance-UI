@@ -1,0 +1,167 @@
+
+$main_black: #555
+
+@keyframes appear 
+	0% 
+		opacity: 0
+	100% 
+		opacity: 1
+
+body
+	background: #efefef
+	cursor: default
+
+	.trans3s
+		transition: all .3s ease-in-out
+
+	.center	
+		text-align: center
+
+.psh-main-container
+	font-family: 'Source Sans Pro', sans-serif
+	padding-top: 25px
+	padding-bottom: 50px
+	height: 100%
+
+	.psh-title
+		font-weight: 200
+		margin: 20px
+		
+	.psh-hr
+		border-top: 1px dashed lighten($main_black,40%)
+		width: 80%
+
+	.psh-captions
+		float: right
+		color: $main_black
+		margin-bottom: 0
+		
+	.clear
+		clear: both
+
+	#psh-info-icon
+		position: fixed
+		right: 0
+		margin: 20px
+		font-size: 25px
+		color: lighten($main_black, 20%)
+		cursor: pointer
+		@extend .trans3s
+		&:hover
+			color: $main_black
+			@extend .trans3s
+
+
+	#psh-chart-container
+
+		.psh-chart-close
+			float: right
+			color: lighten($main_black, 50%)
+			cursor: pointer
+			@extend .trans3s
+			&:hover
+				color: $main_black
+				@extend .trans3s
+
+		#psh-chart
+			animation: appear 2s
+
+	#psh-contents
+		margin-top: 10px
+		overflow: scroll
+		
+		#psh-table
+			th
+				@extend .trans3s
+				text-align: center
+				cursor: default
+				font-family: 'Source Sans Pro', sans-serif
+				font-weight: 200
+
+				&:hover
+					@extend .trans3s
+
+				#psh-search
+					border: 1px solid #ccc
+					border-radius: 4px
+					min-width: 150px
+					padding-right: 0
+
+			.psh-table-yearButton
+				min-width: 100%
+				padding: 6px 12px
+				line-height: 1.42857143
+				border: 1px solid #ccc
+				border-radius: 4px
+
+			.psh-table-header-sort
+				cursor: pointer
+				&:hover
+					background: #ddd
+
+			.psh-table-data,
+			.psh-table-data-name,
+			.psh-table-data-year,
+			.psh-table-data-yearly
+				cursor: pointer
+				@extend .trans3s
+
+				&:hover
+					background: $main_black
+					color: #efefef
+					@extend .trans3s
+			
+				&.selected
+					@extend .trans3s
+					background: $main_black
+					color: #eee
+			
+			.psh-table-data-total
+				background: lighten($main_black, 59%)
+
+	.psh-footer-container
+		text-align: center
+
+
+#psh-info-modal.modal 
+	font-family: 'Source Sans Pro', sans-serif
+	font-weight: 200
+	text-align: center
+	padding: 0!important
+	color: $main_black
+
+	&:before 
+		content: ''
+		display: inline-block
+		height: 100%
+		vertical-align: middle
+		margin-right: -4px
+
+	.modal-dialog 
+		display: inline-block
+		text-align: left
+		vertical-align: middle
+
+		.modal-content
+			background: #efefef
+
+			.psh-modal-title
+				font-weight: 200
+			
+			.psh-modal-body
+				padding-top: 50px
+
+				.psh-modal-info-p
+					font-weight: 200
+					font-size: 1.2em
+					margin-top: 10px
+				.psh-modal-info-img
+					width: 100%
+					padding: 10px
+					margin-bottom: 10px
+				.psh-modal-info-caption
+					padding-left: 10px
+					padding-right: 10px
+				.psh-hr
+					border-top: 1px dashed lighten($main_black,40%)
+					width: 80%
